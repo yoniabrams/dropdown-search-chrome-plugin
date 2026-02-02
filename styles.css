@@ -1,0 +1,53 @@
+/* The main container injected into the body */
+#chrome-plugin-search-popup {
+    position: absolute; /* Changed from fixed to absolute */
+    width: 300px;
+    max-height: 400px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    z-index: 2147483647;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    font-family: sans-serif;
+    border: 1px solid #ddd;
+}
+
+/* The search input field */
+#chrome-plugin-search-popup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#chrome-plugin-search-popup input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* The scrollable results area */
+.search-results {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* Individual list items */
+.search-results div {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.search-results div:hover {
+    background-color: #f0f7ff;
+    color: #000;
+}
